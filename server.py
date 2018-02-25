@@ -1,21 +1,19 @@
 #!/usr/bin/env python
 
 import cherrypy
-from ctl_user import UsersController
+import ctl_user
+from util import jsonify_error
 
 
 def main():
     dispatcher = cherrypy.dispatch.RoutesDispatcher()
 
-    dispatcher.connect(name='users',
-                       route='/users',
-                       action='get_all_users',
-                       controller=UsersController(),
-                       conditions={'method': ['GET']})
+    ctl_user.map_controller(dispatcher)
 
     config = {
         '/': {
             'request.dispatch': dispatcher,
+            'error_page.default': jsonify_error,
         }
     }
 
