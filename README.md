@@ -12,7 +12,7 @@ The "entry point" for this example is `server.py`. Create a `virtualenv` and run
     python3 -m venv venv
     . venv/bin/activate
     pip install -r requirements.txt
-    python3 server.py`
+    python3 server.py
 
 The SQLite3 database is named `mydb.sqlite`. It is automatically created in current directory (wherever `server.py` is executed).
 
