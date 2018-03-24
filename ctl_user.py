@@ -34,7 +34,7 @@ class UsersController:
     def add_user(self):
         with DatabaseSession(dbm) as my_session:
             # validate add user POST data
-            data, errors = UserSchema().load(cherrypy.request.json)
+            data, errors = UserSchema().load(cherrypy.request.json, session=my_session)
 
             if errors:
                 raise cherrypy.HTTPError(

@@ -1,6 +1,7 @@
-from marshmallow import Schema, fields
+from tbl_user import User
+from marshmallow_sqlalchemy import ModelSchema
 
 
-class UserSchema(Schema):
-    id = fields.Int(dump_only=True)
-    name = fields.String()
+class UserSchema(ModelSchema):
+    class Meta:
+        model = User

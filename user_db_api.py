@@ -29,7 +29,5 @@ def get_user_by_id(session, user_id: int) -> User:
     return session.query(User).get(user_id)
 
 
-def add_user(session, user_dict: dict) -> NoReturn:
-    user = User(name=user_dict['name'])
-
+def add_user(session, user: User) -> NoReturn:
     session.add(user)
