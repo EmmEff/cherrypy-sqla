@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+CherryPy = "*"
+Routes = "*"
+marshmallow = "*"
+marshmallow-sqlalchemy = "*"
+
+[dev-packages]
+"flake8" = "*"
+pylint = "*"
+pycodestyle = "*"
+
+[requires]
+python_version = "3.6"
