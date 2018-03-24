@@ -44,7 +44,7 @@ class UsersController:
 
             my_session.commit()
 
-            cherrypy.response.status = 204
+            cherrypy.response.status = 201
 
             return ''
 
