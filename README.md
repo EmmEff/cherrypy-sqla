@@ -23,7 +23,7 @@ Alternatively, for `pipenv` users:
 
 ```shell
 pipenv install
-python3 server.py
+pipenv run python server.py
 ```
 
 The SQLite3 database is named `mydb.sqlite`. It is automatically created in
