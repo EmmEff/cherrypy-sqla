@@ -19,6 +19,13 @@ pip install -r requirements.txt
 python3 server.py
 ```
 
+Alternatively, for `pipenv` users:
+
+```shell
+pipenv install
+python3 server.py
+```
+
 The SQLite3 database is named `mydb.sqlite`. It is automatically created in
 current directory (wherever `server.py` is executed).
 
