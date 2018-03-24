@@ -2,6 +2,7 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy import create_engine
 
 from database import Base
+from tbl_user import User  # noqa pylint: disable=unused-import
 
 
 class DatabaseManager:
